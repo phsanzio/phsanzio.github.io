@@ -8,14 +8,14 @@
             document.getElementById("ifood").style.borderBottomLeftRadius = "8px";
             document.getElementById("ifood").style.borderBottomRightRadius = "8px";
             document.getElementById("ifood").innerHTML= "Você ganhou um MilkShake de Ninho com Nutella!";
-            document.getElementById("button2").style.display= "block";
+            document.getElementById("esconder").style.display= "block";
         } else {
             document.getElementById("button1").style.borderBottomLeftRadius = "0px";
             document.getElementById("button1").style.borderBottomRightRadius = "0px";
             document.getElementById("ifood").style.borderBottomLeftRadius = "8px";
             document.getElementById("ifood").style.borderBottomRightRadius = "8px";
             document.getElementById("ifood").innerHTML = "Você errou a senha!";
-            document.getElementById("button2").style.display= "none";
+            document.getElementById("esconder").style.display= "none";
         }
     }
 </script>
@@ -35,8 +35,7 @@
         <input placeholder="Insira a senha" id="senha" style="width: 100%;background-color: pink">
         <p><button id="button1" type="button" onclick="mostrar()" style="width: 100%;border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; background-color: pink;">Verificar senha</button></p>
         <p id="ifood" style="text-align: center; background-color: pink;"></p>
-        <p><a> href="https://web.whatsapp.com/send?phone=+5531999944856&text=Eu consegui meu lindo!"<button id="button2" type="button" style="display:none; width: 100%;border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; background-color: pink;">Requisitar</button></a></p>
-        
+        <a id="esconder" style="display:none;" href='https://web.whatsapp.com/send?phone=+5531999944856&text=Eu consegui meu lindo!'><button id="button2" type="button" onclick="mostrar()" style="width: 100%;border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; background-color: pink;">Requisitar</button></a>
     </div>
 </body>
 </html>
