@@ -1,41 +1,302 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<script>
-    function mostrar() {
-        if (senha.value == '04022022'){
-            document.getElementById("button1").style.borderBottomLeftRadius = "0px";
-            document.getElementById("button1").style.borderBottomRightRadius = "0px";
-            document.getElementById("ifood").style.borderBottomLeftRadius = "2px";
-            document.getElementById("ifood").style.borderBottomRightRadius = "2px";
-            document.getElementById("ifood").innerHTML= "Você ganhou um MilkShake de Ninho com Nutella!";
-            document.getElementById("esconder").style.display= "block";
-        } else {
-            document.getElementById("button1").style.borderBottomLeftRadius = "0px";
-            document.getElementById("button1").style.borderBottomRightRadius = "0px";
-            document.getElementById("ifood").style.borderBottomLeftRadius = "8px";
-            document.getElementById("ifood").style.borderBottomRightRadius = "8px";
-            document.getElementById("ifood").innerHTML = "Você errou a senha!";
-            document.getElementById("esconder").style.display= "none";
-        }
-    }
-</script>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>19/11</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="shortcut icon" href="arquivos/heart.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#160826">
+  <meta name="description" content="Convite de 15 anos">
+  <title>GIO XV | Um convite especial</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="player">
-        <div class="imgbox">
-            <img src="arquivos/foto_carta.jpg" alt="foto_nossa">
-        </div>
-        <input placeholder="Insira a senha" id="senha" style="width: 100%;background-color: pink">
-        <p><button id="button1" type="button" onclick="mostrar()" style="width: 100%;border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; background-color: pink;">Verificar senha</button></p>
-        <p id="ifood" style="text-align: center; background-color: pink;"></p>
-        <a id="esconder" style="display:none;" href='https://wa.link/2uus81'><button id="button2" type="button" onclick="mostrar()" style="width: 100%;border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; background-color: pink;">Requisitar</button></a>
+
+  <main id="app">
+
+    <!-- =========================================================
+         CENA 1 - LANTERNAS
+         ========================================================= -->
+    <section id="scene-lanterns" class="scene scene-lanterns is-active" aria-label="Abertura">
+      <video
+        id="lanternVideo"
+        class="scene-video"
+        src="videos/lanternas.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+
+      <div class="scene-overlay"></div>
+      <div class="stars"></div>
+
+      <div class="opening-content">
+        <p class="eyebrow">UMA NOITE ENCANTADA</p>
+        <h1>Meus 15 Anos</h1>
+        <p class="opening-name">Giovana</p>
+      </div>
+
+      <button id="enterButton" class="swipe-indicator" type="button" aria-label="Abrir convite">
+        <span>Deslize para cima</span>
+        <span class="arrow">↑</span>
+      </button>
+    </section>
+
+
+    <!-- =========================================================
+         CENA 2 - SEGUNDO VÍDEO
+         ========================================================= -->
+    <section id="scene-transition" class="scene scene-transition" aria-label="Transição">
+      <video
+        id="transitionVideo"
+        class="scene-video"
+        src="videos/cena-2.mp4"
+        muted
+        playsinline
+        preload="auto"
+      ></video>
+
+      <div class="scene-overlay transition-overlay"></div>
+
+      <div class="transition-quote">
+        <p>E enfim eu vejo a luz brilhar...</p>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         CENA 3 - CONVITE
+         ========================================================= -->
+    <section id="scene-invite" class="invite-section" aria-label="Convite">
+      <div class="invite-background"></div>
+      <div class="gold-dust"></div>
+
+      <div class="invite-shell">
+
+        <header class="invite-header">
+          <div class="sun-ornament" aria-hidden="true">✦</div>
+          <p class="eyebrow">COM MUITO CARINHO</p>
+          <h1>Meus 15 Anos</h1>
+          <div class="divider">
+            <span></span>
+            <b>✦</b>
+            <span></span>
+          </div>
+          <p class="intro">
+            Quero compartilhar com você uma das noites mais especiais da minha vida.
+          </p>
+          <h2>Gio</h2>
+        </header>
+
+        <section class="event-card">
+          <div class="event-date">
+            <span class="date-label">Sábado</span>
+            <strong>05</strong>
+            <span class="date-month">12 • 2026</span>
+          </div>
+
+          <div class="event-info-grid">
+            <div class="info-item">
+              <span class="info-icon">◷</span>
+              <div>
+                <small>HORÁRIO</small>
+                <strong>[21:00]</strong>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon">⌖</span>
+              <div>
+                <small>LOCAL</small>
+                <strong>Rua Álvares Maciel 108, Santa Efigênia, salão ASPRA/ PM- BM </strong>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon">✧</span>
+              <div>
+                <small>TRAJE</small>
+                <strong>Esporte fino</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="countdown-wrap">
+            <p>FALTAM</p>
+            <div id="countdown" class="countdown">
+              <div><strong id="days">00</strong><span>DIAS</span></div>
+              <div><strong id="hours">00</strong><span>HORAS</span></div>
+              <div><strong id="minutes">00</strong><span>MIN</span></div>
+              <div><strong id="seconds">00</strong><span>SEG</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="quote-card">
+          <p>
+            “E enfim eu vejo a luz brilhar,<br>
+            e ela está aqui, bem perto de mim.”
+          </p>
+        </section>
+
+        <section class="actions">
+          <button class="action-button" data-modal="locationModal">
+            <span>⌖</span>
+            <strong>Ver local</strong>
+            <small>Endereço e como chegar</small>
+          </button>
+
+          <button class="action-button" data-modal="giftModal">
+            <span>✧</span>
+            <strong>Sugestões de presentes</strong>
+            <small>PIX e tamanhos</small>
+          </button>
+
+          <button class="action-button action-primary" id="rsvpButton">
+            <span>♡</span>
+            <strong>Confirmar presença</strong>
+            <small>Será uma alegria ter você conosco</small>
+          </button>
+        </section>
+
+        <footer class="invite-footer">
+          <div class="divider">
+            <span></span>
+            <b>✦</b>
+            <span></span>
+          </div>
+          <p>Uma noite para guardar para sempre.</p>
+          <small>Com amor,Gio</small>
+        </footer>
+
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ===========================================================
+       MODAL LOCAL
+       =========================================================== -->
+  <div id="locationModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fechar">×</button>
+
+      <span class="modal-icon">⌖</span>
+      <p class="eyebrow">O GRANDE DIA</p>
+      <h2>Como chegar</h2>
+
+      <div class="modal-content">
+        <strong> Salão ASPRA/ PM-BM </strong>
+        <p>
+         Rua Álvares Maciel 108, <br>
+          Santa Efigênia, Cidade - MG<br>
+          CEP 30150250
+      </div>
+
+      <div class="modal-actions">
+        <a
+          class="modal-link"
+          href="https://www.google.com/maps/search/?api=1&query=Rua Álvares Maciel 108, Santa Efigênia, Cidade - MG"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Google Maps</a>
+
+        <a
+          class="modal-link"
+          href="https://waze.com/ul?q=Rua Álvares Maciel 108, Santa Efigênia, Cidade - MG"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Waze</a>
+      </div>
     </div>
+  </div>
+
+
+  <!-- ===========================================================
+       MODAL PRESENTES
+       =========================================================== -->
+  <div id="giftModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fechar">×</button>
+
+      <span class="modal-icon">✧</span>
+      <p class="eyebrow">COM CARINHO</p>
+      <h2>Sugestões de presentes</h2>
+
+      <div class="modal-content">
+        <p>
+          Sua presença é o nosso maior presente. Mas, caso queira me presentear,
+          deixamos algumas opções:
+        </p>
+
+        <div class="pix-box">
+          <small>CHAVE PIX</small>
+          <strong id="pixKey">giovanavfx@gmail.com</strong>
+          <button id="copyPix" type="button">Copiar chave PIX</button>
+          <span id="copyFeedback" class="copy-feedback" aria-live="polite"></span>
+        </div>
+
+        <div class="sizes">
+          <p><strong></strong></p>
+          <p>Roupa: P ou PP</p>
+          <p>Calçado: 37/38</p>
+          <p>Maquiagem</p>
+          <p>Acessórios prata ou dourado</p>
+          <p>Cores: azul, roxo, lilas, verde e rosa</p>
+          <p>Perfume: abaunilhado e floral, cítricos</p>
+          <p>Cosmédicos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===========================================================
+       MODAL RSVP
+       =========================================================== -->
+  <div id="rsvpModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-card rsvp-card">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fechar">×</button>
+
+      <span class="modal-icon">♡</span>
+      <p class="eyebrow">CONFIRME SUA PRESENÇA</p>
+      <h2>Até o dia 5 de novembro</h2>
+
+      <div class="modal-content">
+        <p>
+          Será uma alegria ter você conosco nessa noite encantada.
+        </p>
+
+        <a
+          id="rsvpLink"
+          class="rsvp-link"
+          href="https://forms.gle/2ojFuUmVsrDgPvCZ7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Preencher confirmação</span>
+          <small>O formulário será aberto em uma nova aba</small>
+        </a>
+
+        <p class="form-note">
+          Leva apenas alguns minutos. 💜
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/main.js"></script>
 </body>
 </html>
